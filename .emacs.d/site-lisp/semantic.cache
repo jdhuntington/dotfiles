@@ -1,0 +1,21 @@
+;; Object site-lisp/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "site-lisp/"
+  :tables (list 
+   (semanticdb-table "mmm-auto.el"
+    :major-mode 'emacs-lisp-mode
+    :tags '(("cl" include nil nil [2619 2632]) ("mmm-vars" include nil nil [2633 2652]) ("mmm-autoloaded-classes" variable (:default-value (quote ((mason "mmm-mason" nil) (embedded-css "mmm-sample" nil) (html-js "mmm-sample" nil) (here-doc "mmm-sample" nil) (embperl "mmm-sample" nil) (eperl "mmm-sample" nil) (jsp "mmm-sample" nil) (file-variables "mmm-sample" nil) (rpm-sh "mmm-rpm" t) (rpm "mmm-rpm" nil) (cweb "mmm-cweb" nil) (sgml-dtd "mmm-sample" nil) (noweb "mmm-noweb" nil) (html-php "mmm-sample" nil)))) nil [2686 3447]) ("mmm-autoload-class" function (:arguments ("class" "file" "&optional" "private")) nil [3449 3906]) ("mmm-mode-on" function (:prototype-flag t) nil [3993 4063]) ("mmm-mode-off" function (:prototype-flag t) nil [4066 4138]) ("mmm-update-font-lock-buffer" function (:prototype-flag t) nil [4141 4193]) ("mmm-ensure-fboundp" function (:prototype-flag t) nil [4196 4238]) ("mmm-mode" function (:prototype-flag t :user-visible-flag t) nil [4241 4432]) ("mmm-ify-by-class" function (:prototype-flag t :user-visible-flag t) nil [4466 4510]) ("mmm-ify-by-regexp" function (:prototype-flag t :user-visible-flag t) nil [4511 4556]) ("mmm-ify-region" function (:prototype-flag t :user-visible-flag t) nil [4557 4599]) ("mmm-parse-buffer" function (:prototype-flag t :user-visible-flag t) nil [4600 4644]) ("mmm-parse-region" function (:prototype-flag t :user-visible-flag t) nil [4645 4689]) ("mmm-parse-block" function (:prototype-flag t :user-visible-flag t) nil [4690 4733]) ("mmm-clear-current-region" function (:prototype-flag t :user-visible-flag t) nil [4734 4786]) ("mmm-reparse-current-region" function (:prototype-flag t :user-visible-flag t) nil [4787 4841]) ("mmm-end-current-region" function (:prototype-flag t :user-visible-flag t) nil [4842 4892]) ("mmm-insertion-help" function (:prototype-flag t :user-visible-flag t) nil [4893 4939]) ("mmm-insert-region" function (:prototype-flag t :user-visible-flag t) nil [4940 4985]) ("mmm-changed-buffers-list" variable nil nil [5016 5121]) ("mmm-major-mode-change" function nil nil [5123 5583]) ("add-hook" code nil nil [5585 5642]) ("mmm-check-changed-buffers" function nil nil [5644 6015]) ("mmm-mode-on-maybe" function nil nil [6017 6381]) ("add-hook" code nil nil [6383 6433]) ("defalias" code nil nil [6435 6494]) ("mmm-add-find-file-hook" function nil nil [6495 6731]) ("mmm-auto" package nil nil [6740 6759]))
+    :file "mmm-auto.el"
+    :pointmax 6786
+    )
+   (semanticdb-table "mmm-sample.el"
+    :major-mode 'emacs-lisp-mode
+    :tags '(("mmm-auto" include nil nil [1153 1172]) ("mmm-vars" include nil nil [1173 1192]) ("mmm-add-classes" code nil nil [1316 1479]) ("mmm-add-group" code nil nil [1681 2177]) ("mmm-here-doc-mode-alist" variable (:default-value (quote nil)) nil [2624 3107]) ("mmm-here-doc-get-mode" function (:arguments ("string")) nil [3109 4723]) ("mmm-add-classes" code nil nil [4725 5049]) ("mmm-add-group" code nil nil [5072 5984]) ("mmm-add-group" code nil nil [6005 6587]) ("mmm-file-variables-verify" function nil nil [6827 7861]) ("mmm-file-variables-find-back" function (:arguments ("bound")) nil [7863 7979]) ("mmm-add-classes" code nil nil [7981 8177]) ("mmm-add-group" code nil nil [8202 9030]) ("mmm-add-classes" code nil nil [9156 9322]) ("mmm-add-classes" code nil nil [9358 9479]) ("mmm-add-group" code nil nil [9595 10111]) ("mmm-sample" package nil nil [11949 11970]))
+    :file "mmm-sample.el"
+    :pointmax 11999
+    )
+   )
+  :file "semantic.cache"
+  :semantic-tag-version "2.0pre3"
+  :semanticdb-version "2.0pre3"
+  )

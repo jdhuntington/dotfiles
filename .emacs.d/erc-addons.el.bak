@@ -1,0 +1,47 @@
+(defmacro jd-erc-make-cmd(action response)
+  "makes an erc command"
+  `(defun ,(intern (concat "erc-cmd-" (upcase action))) nil "does some action" (erc-send-action (erc-default-target) ,response)))
+
+(jd-erc-make-cmd "laugh" "laughs")
+(jd-erc-make-cmd "lol" "laughs out loud")
+(jd-erc-make-cmd "chuckle" "chuckles")
+(jd-erc-make-cmd "guffaw" "guffaws")
+
+(defun erc-cmd-FISH (name)
+  "slap someoone with a fish"
+  (erc-send-action (erc-default-target) (format "slaps %s with a cold fish." name)))
+ 
+(defun erc-cmd-REV (&rest words)
+  "reverse the comment before sending"
+  (if words
+      (erc-send-message (apply 'concat (reverse (split-string (mapconcat 'identity words " ") ""))))
+            (erc-display-message nil 'notice 'active "Nothing to reverse")))
+ 
+(defun erc-cmd-DOP (&rest words)
+  "Apply, Nev's doppler affect to comment"
+  (erc-send-message (mapconcat (function (lambda (x) (format "%s %s" x x))) words " ")))
+
+
+
+(defun erc-cmd-ITUNES ()
+  "Show currently playing in iTunes"
+  (erc-send-action (erc-default-target) (concat "is " (replace-regexp-in-string "[ \t\n]*$" "" (shell-command-to-string  "/usr/local/bin/ruby /Users/jedediah/.emacs.d/ShowItunesTrack.rb")))))
+
+ (defun erc-cmd-BIG (&rest words)
+   "biggify text L I K E   T H I S"
+   (if words (erc-send-message (substring (mapconcat (function (lambda (x) (format "%s" (capitalize x)))) (split-string (mapconcat
+	  'identity words " ") "") " ") 1))
+ 		(erc-display-message nil 'notice 'active "Nothing to biggify")))
+
+(defun erc-cmd-SARCASM (&rest words)			     
+  "wrap comment in <sarcasm></sarcasm> tags"
+  (if words
+      (erc-send-message (format "<sarcasm>%s</sarcasm>"	(mapconcat 'identity words " ")))
+    (erc-display-message nil 'notice 'active "No sarcasm found.")))
+
+(defun erc-cmd-CARD (&rest words)
+  "|c|a|r|d|i|f|y| |c|o|m|m|e|n|t|"
+  (if words
+      (erc-send-message (substring (mapconcat (function
+					       (lambda (x) (format "|%s" x))) (split-string (mapconcat 'identity words " ") "") "") 1))
+    (erc-display-message nil 'notice 'active "|N|o|t|h|i|n|g| |t|o| |c|a|r|d|i|f|y|.|")))

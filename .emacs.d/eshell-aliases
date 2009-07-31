@@ -1,0 +1,7 @@
+alias gnb git checkout -b $1
+alias gs git status
+alias gcom git checkout master
+alias gb git branch -a
+alias e find-file $1
+alias pdx cd ~/projects/projectdx-pdxrails
+alias cons script/console
